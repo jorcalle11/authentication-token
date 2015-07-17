@@ -1,4 +1,5 @@
-#Authenticacion basada en token 
+#Authenticacion basada en token
 
-  ejemplo básico de autenticacion por token en node.js 
-  
+  Ejemplo de autenticación basada en Token.
+
+
