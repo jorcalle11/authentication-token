@@ -19,11 +19,11 @@ exports.login = function(req,res){
   User.findOne({'email':credetials.email},function(err,user){
     if(user)
       if(user.validPassword(credetials.password))
-        res.status(200).json({'Token':service.createToken(user)});
+        res.status(200).json({'token':service.createToken(user)});
         else
-        res.status(400).send({message:'Password invalid'});
+        res.status(400).send({message:'Contraseña Incorrecta'});
     else
-      res.status(400).send({message: 'User no found'});
+      res.status(400).send({message: 'Email no encontrado, Registrate!'});
   });
 };
 
@@ -41,7 +41,7 @@ exports.registro = function(req,res){
       return res.status(400).send({
         message: handleError.getErrorMessage(err)
       });
-    res.status(201).json({'Token':service.createToken(user)});
+    res.status(201).json({'token':service.createToken(user)});
   });
 };
 

@@ -1,0 +1,11 @@
+<div class="jumbotron col-md-8 col-md-offset-2">
+	<h3>Authenticación por Token</h3>
+	<p>Aplicación basica que permite realizar el inicio de Sesión mediante Token</p>
+	<div ng-if="!isAuthenticated()">
+		<a class="btn btn-primary" href="#/login">Iniciar Sesion</a>
+		<a class="btn btn-default" href="#/registrate">Registrate</a>
+	</div>
+	<div ng-if="isAuthenticated()" class="text-center">
+		<a class="btn btn-warning" ng-click="logout()">Cerrar Sesion</a>
+	</div>
+</div>

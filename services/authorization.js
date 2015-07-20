@@ -6,6 +6,7 @@ module.exports.isLogged = function(req,res,next){
 
   var token = req.headers.authorization.split(" ")[1];
   var payload = jwt.decode(token,require('../config').secret);
+  console.log(payload);
   req.user = payload.sub;
   next();
 }
